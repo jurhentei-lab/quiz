@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "npm run dev:frontend",
-    "dev:frontend": "cd frontend && node ../node_modules/next/dist/bin/next dev",
+    "dev:frontend": "cd frontend && next dev --webpack -H 127.0.0.1",
     "dev:backend": "node --env-file=backend/.env backend/server.mjs",
-    "build": "cd frontend && node ../node_modules/next/dist/bin/next build --webpack",
-    "start": "cd frontend && node ../node_modules/next/dist/bin/next start",
-    "lint": "cd frontend && node ../node_modules/eslint/bin/eslint.js ."
+    "build": "cd frontend && next build --webpack",
+    "start": "cd frontend && next start -H 127.0.0.1",
+    "lint": "cd frontend && eslint ."
   },
   "dependencies": {
     "@mediapipe/tasks-vision": "^0.10.32",
